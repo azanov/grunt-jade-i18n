@@ -17,7 +17,7 @@ module.exports = (grunt) ->
     jadeOrigConfig = grunt.config.get('jade')[@target]
 
     gruntTaskName = grunt.cli.tasks
-    anotherTargetsForTask = gruntTaskName[0].split ':jade'
+    #anotherTargetsForTask = gruntTaskName[0].split ':jade'
 
 
     options = @options()
@@ -85,10 +85,10 @@ module.exports = (grunt) ->
 
     # finally run the original Jade task
     # check if we uses external tasks like grunt-newer
-    if anotherTargetsForTask.length > 1 and not languageHasChanged
-      grunt.task.run anotherTargetsForTask[0] + ':contrib-jade'
-    else
-      grunt.task.run 'contrib-jade'
+    #if anotherTargetsForTask.length > 1 and not languageHasChanged
+    #  grunt.task.run anotherTargetsForTask[0] + ':contrib-jade'
+    #else
+    grunt.task.run 'contrib-jade'
 
 
 
